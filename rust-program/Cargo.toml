@@ -1,0 +1,17 @@
+[package]
+name = "pda-local"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+borsh = "0.10.3"
+solana-program = "2.0.8"
+thiserror = "1.0.63"
+
+[lib]
+crate-type = ["cdylib", "lib"]
