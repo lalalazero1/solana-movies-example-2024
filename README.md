@@ -2,6 +2,14 @@
 
 实践过，能跑起来的 solana movies 项目代码
 
+## 环境
+
+- wsl Ubuntu 22.04.3 LTS
+- rust 1.75.0
+- solana CLI 1.18.21
+- anchor CLI 0.30.1
+- node 18.20.4
+
 ## 文件夹区分
 
 1. `rust-program`
