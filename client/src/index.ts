@@ -37,11 +37,13 @@ const movieInstructionLayout = borsh.struct([
 ])
 
 async function sendTestMovieReview(signer: web3.Keypair, programId: web3.PublicKey, connection: web3.Connection) {
+    // rust 代码中校验了 buffer 的长度不能超过 1000 bytes
     let buffer = Buffer.alloc(1000)
     const random = Math.random()*10
     const randomString = random.toFixed(2)
     const movieTitle = `Braveheart-random-${randomString}`
     // const movieTitle = "Test Hero 1222"
+    // 在对应的 rust 代码中，0表示添加影评，1表示更新影评
     const variant = 0
     movieInstructionLayout.encode(
         {
